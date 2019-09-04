@@ -32,7 +32,7 @@ describe('Articles Endpoints', function() {
 
   describe.only('Protected endpoints', () => {
     beforeEach('insert articles', () => {
-      helpers.seedArticlesTables(db, testUsers, testArticles, testComments)
+      return helpers.seedArticlesTables(db, testUsers, testArticles, testComments)
     })
 
     describe('GET /api/articles/:article_id', () => {
